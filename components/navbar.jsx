@@ -12,7 +12,7 @@ import {
 } from "next-auth/react";
 
 const Nav = () => {
-  const { data: session } = <SessionProvider>useSession();</SessionProvider>;
+  const { data: session } = useSession();
 
   const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
