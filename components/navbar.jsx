@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import Link from 'next/link';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import {
   signIn,
   signOut,
   useSession,
   getProviders,
   SessionProvider,
-} from "next-auth/react";
+} from 'next-auth/react';
 
 const Nav = () => {
   const { data: session } = useSession();
@@ -42,7 +42,7 @@ const Nav = () => {
         {session?.user ? (
           <div className="flex gap-3 md:gap-5">
             <Link href="/create-prompt" className="black_btn">
-              Create Post
+              Create A Task
             </Link>
 
             <button type="button" onClick={signOut} className="outline_btn">
@@ -105,7 +105,7 @@ const Nav = () => {
                   className="dropdown_link"
                   onClick={() => setToggleDropdown(false)}
                 >
-                  Create Prompt
+                  Create Task
                 </Link>
                 <button
                   type="button"
